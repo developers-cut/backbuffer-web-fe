@@ -1,0 +1,29 @@
+html
+    head
+        title BackBuffer Prototype
+        link(href="bootstrap.min.css", rel="stylesheet")
+        link(href="index.css", rel="stylesheet")
+    body
+        .container
+            .row.header
+                .greeting.col-xs-8 Hey there, Tom! Here's your buffer.
+                .col-xs-4
+                    button.btn.pull-right + New item
+            .row
+                #buffer.col-sm-12
+                    .buffer-item
+                        .row
+                            .col-sm-6
+                                .title Prototype backbuffer
+                                .description Do a simple html page with a couple of tasks to figure out how backbuffer looks best.
+                            .col-sm-2 Open
+                            .col-sm-2 Assigned to me
+                            .col-sm-2 Not shared
+                    .buffer-item
+                        .title Associate roles
+                        .description Write roles for D/C - ideas: partner (stakeholders), non-funding belongers (Cutter), specific team dev.
+                    .buffer-item
+                        .title Templates in vim?
+                        .description Search for a method of handling templates in vim; if it exists, snatch it! 
+                #filters-tab Show filters
+                #filters.col-sm-4.hidden

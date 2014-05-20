@@ -1,0 +1,27 @@
+@import 'compass/css3/border-radius';
+
+$palette_dark_grey: #666;
+
+.header {
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+.greeting {
+    font-size: 2em;
+}
+
+.buffer-item {
+    border: solid 1px $palette_dark_grey;
+    padding: 10px;
+
+    @include border-radius;
+
+    & + .buffer-item {
+        margin-top: 20px;
+    }
+}
+
+.title {
+    font-size: 1.5em;
+}
