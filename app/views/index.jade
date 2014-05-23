@@ -1,0 +1,59 @@
+html
+    head
+        title BackBuffer Prototype
+        link(href="bootstrap.min.css", rel="stylesheet")
+        link(href="index.css", rel="stylesheet")
+    body
+        .container-fluid
+            .row#root
+                .col-sm-9
+                    .header
+                        span.logo BackBuffer
+                        span.slogan All things. One place.
+                        button.btn.btn-default.new-btn.pull-right + New item
+                    #buffer
+                        .buffer-item
+                            .row
+                                .col-sm-6
+                                    .title: a(href="#") Prototype backbuffer
+                                    .description Do a simple html page with a couple of tasks to figure out how backbuffer looks best.
+                                .col-sm-6
+                                    .main-label.open-status Open
+                                    .main-label.assigned-me Assigned to me
+                        .buffer-item
+                            .title Associate roles
+                            .description Write roles for D/C - ideas: partner (stakeholders), non-funding belongers (Cutter), specific team dev.
+                        .buffer-item
+                            .title Templates in vim?
+                            .description Search for a method of handling templates in vim; if it exists, snatch it!
+                        .buffer-item
+                            .title Font in backbuffer
+                            .description Do a font test for BkB
+                        .buffer-item
+                            .title New movies for my list
+                            .description Little Miss Sunshine, Leatherheads, Get Smart, Rio (1 and 2), Days of the Future Past, Bourne trilogy, The Wolf of Wall Street, Hairspray, Gone with the Wind, Casablanca, Misery, Four Weddings and a Funeral, Breakfast at Tiffany's, Annie Hall, Zoolander, Catching Fire
+                        .buffer-item
+                            .title Ideas for BkB
+                            .description
+                                ul
+                                    li include markdown support in description
+                                    li save filters and reopen app with the same filters
+                                    li Item groups (buffer sets) that share the same ACLs (see what Google Docs does when you try to modify ACLs in a shared folder)
+                .col-sm-3
+                    #filters
+                        .title Filters
+                        .checkbox
+                            label
+                                input(type="checkbox")
+                                | Show only items assigned to me
+                        .checkbox
+                            label
+                                input(type="checkbox")
+                                | Show only open items
+
+                #root-footer
+            .row#footer
+                .col-xs-12
+                    span An app by
+                    a(href="//developerscut.co.uk")
+                        img(src="d-c_logo.png")
