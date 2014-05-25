@@ -1,0 +1,131 @@
+/* line 10, ../../../../.rvm/gems/ruby-1.9.3-p125@railstut/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, ../../../../.rvm/gems/ruby-1.9.3-p125@railstut/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#root {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -50px;
+}
+/* line 18, ../../../../.rvm/gems/ruby-1.9.3-p125@railstut/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#root #root_footer {
+  height: 50px;
+}
+
+/* line 20, ../../../../.rvm/gems/ruby-1.9.3-p125@railstut/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#footer {
+  clear: both;
+  position: relative;
+  height: 50px;
+}
+
+/* line 18, ../../app/stylesheets/index.scss */
+body {
+  background-color: #f7f7f7;
+  padding-top: 40px;
+}
+
+/* line 23, ../../app/stylesheets/index.scss */
+.logo {
+  font-style: italic;
+  color: #008833;
+  font-size: 2.5em;
+  margin-right: 20px;
+}
+
+/* line 30, ../../app/stylesheets/index.scss */
+.new-btn {
+  vertical-align: bottom;
+}
+
+/* line 34, ../../app/stylesheets/index.scss */
+#filters {
+  background-color: #cccccc;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 41, ../../app/stylesheets/index.scss */
+.description {
+  color: #666666;
+}
+
+/* line 45, ../../app/stylesheets/index.scss */
+.header {
+  padding-bottom: 20px;
+}
+
+/* line 49, ../../app/stylesheets/index.scss */
+.slogan {
+  font-size: 1.3em;
+}
+
+/* line 53, ../../app/stylesheets/index.scss */
+.main-label {
+  color: #fff;
+  padding: 5px 10px;
+  float: right;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 60, ../../app/stylesheets/index.scss */
+.main-label + .main-label {
+  margin-right: 10px;
+}
+
+/* line 65, ../../app/stylesheets/index.scss */
+.open-status {
+  background-color: #008833;
+}
+
+/* line 69, ../../app/stylesheets/index.scss */
+.assigned-me {
+  background-color: #3333ff;
+}
+
+/* line 73, ../../app/stylesheets/index.scss */
+#buffer {
+  background-color: #fff;
+  border: solid 1px #cccccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 80, ../../app/stylesheets/index.scss */
+.buffer-item {
+  padding: 10px;
+}
+/* line 83, ../../app/stylesheets/index.scss */
+.buffer-item + .buffer-item {
+  border-top: solid 1px #eeeeee;
+}
+
+/* line 88, ../../app/stylesheets/index.scss */
+.title {
+  font-size: 1.5em;
+}
+
+/* line 92, ../../app/stylesheets/index.scss */
+#footer {
+  font-size: .8em;
+  padding-top: 10px;
+  text-align: center;
+}
+/* line 97, ../../app/stylesheets/index.scss */
+#footer a {
+  margin-left: 5px;
+}

@@ -1,0 +1,78 @@
+
+<html>
+  <head>
+    <title>Backbuffer Prototype</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/css/index.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="root" class="row">
+        <div class="col-sm-9">
+          <div class="header"><span class="logo">Backbuffer</span><span class="slogan">All things. One place.</span>
+            <button class="btn btn-default new-btn pull-right">+ New item</button>
+          </div>
+          <div id="buffer">
+            <div class="buffer-item">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="title"><a href="#">Prototype backbuffer</a></div>
+                  <div class="description">Do a simple html page with a couple of tasks to figure out how backbuffer looks best.</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="main-label open-status">Open</div>
+                  <div class="main-label assigned-me">Assigned to me</div>
+                </div>
+              </div>
+            </div>
+            <div class="buffer-item">
+              <div class="title">Associate roles</div>
+              <div class="description">Write roles for D/C - ideas: partner (stakeholders), non-funding belongers (Cutter), specific team dev.</div>
+            </div>
+            <div class="buffer-item">
+              <div class="title">Templates in vim?</div>
+              <div class="description">Search for a method of handling templates in vim; if it exists, snatch it!</div>
+            </div>
+            <div class="buffer-item">
+              <div class="title">Font in backbuffer</div>
+              <div class="description">Do a font test for BkB</div>
+            </div>
+            <div class="buffer-item">
+              <div class="title">New movies for my list</div>
+              <div class="description">Little Miss Sunshine, Leatherheads, Get Smart, Rio (1 and 2), Days of the Future Past, Bourne trilogy, The Wolf of Wall Street, Hairspray, Gone with the Wind, Casablanca, Misery, Four Weddings and a Funeral, Breakfast at Tiffany's, Annie Hall, Zoolander, Catching Fire</div>
+            </div>
+            <div class="buffer-item">
+              <div class="title">Ideas for BkB</div>
+              <div class="description">
+                <ul>
+                  <li>include markdown support in description</li>
+                  <li>save filters and reopen app with the same filters</li>
+                  <li>Item groups (buffer sets) that share the same ACLs (see what Google Docs does when you try to modify ACLs in a shared folder)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div id="filters">
+            <div class="title">Filters</div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"/>Show only items assigned to me
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"/>Show only open items
+              </label>
+            </div>
+          </div>
+        </div>
+        <div id="root-footer"></div>
+      </div>
+      <div id="footer" class="row">
+        <div class="col-xs-12"><span>An app by</span><a href="//developerscut.co.uk"><img src="/images/d-c_logo.png"/></a></div>
+      </div>
+    </div>
+  </body>
+</html>
