@@ -3,11 +3,12 @@
     "description": "Package for the Backbuffer app",
     "author": "Thomas N. Tomei <royalsflush@developerscut.co.uk>",
     "repository" : {
-        "type" : "git"
+        "type" : "git",
         "url" : "https://github.com/developers-cut/backbuffer"
-    }
+    },
     "dependencies": {
-        "bower": "1.x.x"
+        "bower": "1.x.x",
+        "coffee-script": "1.7.x"
     },
     "engine": "node >= 0.10.1"
 }
