@@ -5,73 +5,55 @@ html
              rel="stylesheet")
         link(href="/css/index.css", rel="stylesheet")
     body
-        .container-fluid
-            .row#root
-                .col-sm-9
-                    .header
-                        span.logo Backbuffer
-                        span.slogan All things. One place.
-                        button.btn.btn-default.new-btn.pull-right + New item
-                    #buffer
-                        .buffer-item
-                            .row
-                                .col-sm-6
-                                    .title: a(href="#") Prototype backbuffer
-                                    .description Do a simple html page with a couple of tasks to figure out how backbuffer looks best.
-                                .col-sm-6
-                                    .main-label.open-status Open
-                                    .main-label.assigned-me Assigned to me
-                        .buffer-item
-                            .title Associate roles
-                            .description Write roles for D/C - ideas: partner (stakeholders), non-funding belongers (Cutter), specific team dev.
-                        .buffer-item
-                            .title Templates in vim?
-                            .description Search for a method of handling templates in vim; if it exists, snatch it!
-                        .buffer-item
-                            .title Font in backbuffer
-                            .description Do a font test for BkB
-                        .buffer-item
-                            .title New movies for my list
-                            .description Little Miss Sunshine, Leatherheads, Get Smart, Rio (1 and 2), Days of the Future Past, Bourne trilogy, The Wolf of Wall Street, Hairspray, Gone with the Wind, Casablanca, Misery, Four Weddings and a Funeral, Breakfast at Tiffany's, Annie Hall, Zoolander, Catching Fire
-                        .buffer-item
-                            .title Ideas for BkB
-                            .description
-                                ul
-                                    li include markdown support in description
-                                    li save filters and reopen app with the same filters
-                                    li Item groups (buffer sets) that share the same ACLs (see what Google Docs does when you try to modify ACLs in a shared folder)
-                        .buffer-item
-                            .title Config lint
-                            .description
-                                ul
-                                    li SCSS Lint
-                                    li Jade lint
-                                    li Python lint (Google codestyle pylint)
-                        .buffer-item
-                            .title Config git hook
-                            .description
-                                ul
-                                    li Not able to commit to production branch.
-                                    li check lint before commit.
-                                    li compile files before commit.
-                        .buffer-item
-                            .title Figure a way of compiling SCSS, Coffee and Jade during deploy
-                            .description
-                .col-sm-3
-                    #filters
-                        .title Filters
-                        .checkbox
-                            label
-                                input(type="checkbox")
-                                | Show only items assigned to me
-                        .checkbox
-                            label
-                                input(type="checkbox")
-                                | Show only open items
+        //- Handlebars templates.
+        script(type="text/x-handlebars", data-template-name="application")
+            .container-fluid
+                .row#root
+                    .col-sm-9
+                        .header
+                            span.logo Backbuffer
+                            span.slogan All things. One place.
+                            button.btn.btn-default.new-btn.pull-right + New item
+                        #buffer {{outlet}}
+                    .col-sm-3
+                        #filters
+                            .title Filters
+                            .checkbox
+                                label
+                                    input(type="checkbox")
+                                    | Show only items assigned to me
+                            .checkbox
+                                label
+                                    input(type="checkbox")
+                                    | Show only open items
 
-                #root-footer
-            .row#footer
-                .col-xs-12
-                    span An app by
-                    a(href="//developerscut.co.uk")
-                        img(src="/images/d-c_logo.png")
+                    #root-footer
+                .row#footer
+                    .col-xs-12
+                        span An app by
+                        a(href="//developerscut.co.uk")
+                            img(src="/images/d-c_logo.png")
+
+        script(type="text/x-handlebars", data-template-name="data")
+            | {{#each}}
+            .buffer-item
+                .row
+                    .col-sm-6
+                        .title: a(href="#") {{title}}
+                        .description {{markdown description}}
+                    .col-sm-6
+                        .main-label.open-status.
+                            {{#if closed}} Closed
+                            {{else}} Open
+                            {{/if}}
+                        .main-label.assigned-me {{assigned_to}}
+            | {{/each}}
+
+
+        //- Scripts section.
+        script(src="/bower_components/jquery/jquery.min.js")
+        script(src="/js/handlebars-v1.3.0.js")
+        script(src="/bower_components/ember/ember.js")
+        script(src="/bower_components/ember-data/ember-data.js")
+        script(src="/node_modules/pagedown/Markdown.Converter.js")
+        script(src="/js/backbuffer.js")

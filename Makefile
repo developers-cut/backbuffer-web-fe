@@ -6,6 +6,10 @@ all:
 dev_install:
 	@echo 'Nothing to install'
 
+# POG ftw...
+prod: debug
+
 debug:
 	jade --pretty app/views/index.jade --out ./
 	compass compile
+	cat app/scripts/*.js > public/js/backbuffer.js

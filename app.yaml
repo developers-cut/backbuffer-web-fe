@@ -11,11 +11,18 @@ handlers:
 - url: /images/*
   static_dir: public/images
 
+- url: /js/*
+  static_dir: public/js
+
+- url: /bower_components/*
+  static_dir: bower_components
+
+- url: /node_modules/*
+  static_dir: node_modules
 
 - url: /favicon\.ico
   static_files: public/images/favicon.ico
   upload: favicon\.ico
-
 
 - url: .*
   script: main.app
