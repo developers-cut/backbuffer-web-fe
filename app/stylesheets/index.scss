@@ -12,6 +12,7 @@ $palette_green: #083;
 $neutral_blue: #33f;
 $whitesmoke: #f7f7f7;
 $really_light_grey: #eee;
+$closed_red: #f55;
 
 @include sticky-footer(50px);
 
@@ -64,6 +65,10 @@ body {
 
 .open-status {
     background-color: $palette_green;
+}
+
+.closed-status {
+    background-color: $closed_red;
 }
 
 .assigned-me {

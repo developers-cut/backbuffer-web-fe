@@ -23,13 +23,13 @@ html, body {
   height: 50px;
 }
 
-/* line 18, ../../app/stylesheets/index.scss */
+/* line 19, ../../app/stylesheets/index.scss */
 body {
   background-color: #f7f7f7;
   padding-top: 40px;
 }
 
-/* line 23, ../../app/stylesheets/index.scss */
+/* line 24, ../../app/stylesheets/index.scss */
 .logo {
   font-style: italic;
   color: #008833;
@@ -37,12 +37,12 @@ body {
   margin-right: 20px;
 }
 
-/* line 30, ../../app/stylesheets/index.scss */
+/* line 31, ../../app/stylesheets/index.scss */
 .new-btn {
   vertical-align: bottom;
 }
 
-/* line 34, ../../app/stylesheets/index.scss */
+/* line 35, ../../app/stylesheets/index.scss */
 #filters {
   background-color: #cccccc;
   padding: 10px;
@@ -53,22 +53,22 @@ body {
   border-radius: 5px;
 }
 
-/* line 41, ../../app/stylesheets/index.scss */
+/* line 42, ../../app/stylesheets/index.scss */
 .description {
   color: #666666;
 }
 
-/* line 45, ../../app/stylesheets/index.scss */
+/* line 46, ../../app/stylesheets/index.scss */
 .header {
   padding-bottom: 20px;
 }
 
-/* line 49, ../../app/stylesheets/index.scss */
+/* line 50, ../../app/stylesheets/index.scss */
 .slogan {
   font-size: 1.3em;
 }
 
-/* line 53, ../../app/stylesheets/index.scss */
+/* line 54, ../../app/stylesheets/index.scss */
 .main-label {
   color: #fff;
   padding: 5px 10px;
@@ -79,22 +79,27 @@ body {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 60, ../../app/stylesheets/index.scss */
+/* line 61, ../../app/stylesheets/index.scss */
 .main-label + .main-label {
   margin-right: 10px;
 }
 
-/* line 65, ../../app/stylesheets/index.scss */
+/* line 66, ../../app/stylesheets/index.scss */
 .open-status {
   background-color: #008833;
 }
 
-/* line 69, ../../app/stylesheets/index.scss */
+/* line 70, ../../app/stylesheets/index.scss */
+.closed-status {
+  background-color: #ff5555;
+}
+
+/* line 74, ../../app/stylesheets/index.scss */
 .assigned-me {
   background-color: #3333ff;
 }
 
-/* line 73, ../../app/stylesheets/index.scss */
+/* line 78, ../../app/stylesheets/index.scss */
 #buffer {
   background-color: #fff;
   border: solid 1px #cccccc;
@@ -105,27 +110,27 @@ body {
   border-radius: 5px;
 }
 
-/* line 80, ../../app/stylesheets/index.scss */
+/* line 85, ../../app/stylesheets/index.scss */
 .buffer-item {
   padding: 10px;
 }
-/* line 83, ../../app/stylesheets/index.scss */
+/* line 88, ../../app/stylesheets/index.scss */
 .buffer-item + .buffer-item {
   border-top: solid 1px #eeeeee;
 }
 
-/* line 88, ../../app/stylesheets/index.scss */
+/* line 93, ../../app/stylesheets/index.scss */
 .title {
   font-size: 1.5em;
 }
 
-/* line 92, ../../app/stylesheets/index.scss */
+/* line 97, ../../app/stylesheets/index.scss */
 #footer {
   font-size: .8em;
   padding-top: 10px;
   text-align: center;
 }
-/* line 97, ../../app/stylesheets/index.scss */
+/* line 102, ../../app/stylesheets/index.scss */
 #footer a {
   margin-left: 5px;
 }
