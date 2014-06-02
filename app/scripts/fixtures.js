@@ -39,7 +39,7 @@ Backbuffer.Data.FIXTURES = [
     {
         id: 6,
         title: 'Ideas for BkB',
-        description: '* include markdown support in description\n* save filters and reopen app with the same filters\n* Item groups (buffer sets) that share the same ACLs (see what Google Docs does when you try to modify ACLs in a shared folder)',
+        description: '* ~~include markdown support in description~~\n* save filters and reopen app with the same filters\n* Item groups (buffer sets) that share the same ACLs (see what Google Docs does when you try to modify ACLs in a shared folder)',
         closed: false,
         assigned_to: 'thomas@developerscut.co.uk'
     },

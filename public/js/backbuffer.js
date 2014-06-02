@@ -6,7 +6,7 @@ Backbuffer.Store = DS.Store.extend({
 });
 
 Backbuffer.Router.map(function() {
-    this.resource('data', {path: '/'});
+    this.resource('data', {path: '/:data_id'});
 })
 
 Backbuffer.Data = DS.Model.extend({
@@ -16,9 +16,15 @@ Backbuffer.Data = DS.Model.extend({
     assigned_to: DS.attr('string')
 });
 
-Backbuffer.DataRoute = Ember.Route.extend({
+Backbuffer.IndexRoute = Ember.Route.extend({
     model: function() {
         return this.store.find('data');
+    }
+});
+
+Backbuffer.DataRoute = Ember.Route.extend({
+    model: function(params) {
+        return this.store.find('data', params.data_id);
     }
 });
 // Fixtures for Data model - Backbuffer.
@@ -62,7 +68,7 @@ Backbuffer.Data.FIXTURES = [
     {
         id: 6,
         title: 'Ideas for BkB',
-        description: '* include markdown support in description\n* save filters and reopen app with the same filters\n* Item groups (buffer sets) that share the same ACLs (see what Google Docs does when you try to modify ACLs in a shared folder)',
+        description: '* ~~include markdown support in description~~\n* save filters and reopen app with the same filters\n* Item groups (buffer sets) that share the same ACLs (see what Google Docs does when you try to modify ACLs in a shared folder)',
         closed: false,
         assigned_to: 'thomas@developerscut.co.uk'
     },

@@ -6,7 +6,7 @@ Backbuffer.Store = DS.Store.extend({
 });
 
 Backbuffer.Router.map(function() {
-    this.resource('data', {path: '/'});
+    this.resource('data', {path: '/:data_id'});
 })
 
 Backbuffer.Data = DS.Model.extend({
@@ -16,8 +16,14 @@ Backbuffer.Data = DS.Model.extend({
     assigned_to: DS.attr('string')
 });
 
-Backbuffer.DataRoute = Ember.Route.extend({
+Backbuffer.IndexRoute = Ember.Route.extend({
     model: function() {
         return this.store.find('data');
+    }
+});
+
+Backbuffer.DataRoute = Ember.Route.extend({
+    model: function(params) {
+        return this.store.find('data', params.data_id);
     }
 });

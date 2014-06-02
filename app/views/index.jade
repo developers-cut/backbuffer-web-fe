@@ -41,26 +41,29 @@ html
                 .box
                     .sharing There will be sharing here!
 
-        script(type="text/x-handlebars", data-template-name="not-data")
+        script(type="text/x-handlebars", data-template-name="index")
             .col-sm-9
                 .header
                     span.logo Backbuffer
                     span.slogan All things. One place.
                     button.btn.btn-default.new-btn.pull-right + New item
                 #buffer
-                    | {{#each}}
+                    | {{#each data in model}}
                     .buffer-item
                         .row
                             .col-sm-6
-                                .title: a(href="#") {{title}}
-                                .description {{markdown description}}
+                                .title: a(href="#").
+                                    {{#link-to 'data' data}}
+                                        {{data.title}}
+                                    {{/link-to}}
+                                .description {{markdown data.description}}
                             .col-sm-6
-                                | {{#if closed}}
+                                | {{#if data.closed}}
                                 .main-label.closed-status Closed
                                 | {{else}}
                                 .main-label.open-status Open
                                 | {{/if}}
-                                .main-label.assigned-me {{assigned_to}}
+                                .main-label.assigned-me {{data.assigned_to}}
                     | {{/each}}
             .col-sm-3
                 #filters
