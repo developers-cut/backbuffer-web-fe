@@ -1,3 +1,7 @@
+//- Index.jade
+//- The only complete HTML file in Backbuffer - all of the other are templates
+//- rendered by Ember.
+
 html
     head
         title Backbuffer Prototype
@@ -9,77 +13,13 @@ html
     body
         //- Handlebars templates.
         script(type="text/x-handlebars", data-template-name="application")
-            .container-fluid
-                .row#root
-                    | {{outlet}}
-                    #root-footer
-                .row#footer
-                    .col-xs-12
-                        span An app by
-                        a(href="//developerscut.co.uk")
-                            img(src="/images/d-c_logo.png")
+            include templates/application
 
         script(type="text/x-handlebars", data-template-name="data")
-            .col-sm-9
-                {{#link-to 'index'}}Back to buffer (hehe){{/link-to}}
-                .box
-                    .title.row
-                        .col-sm-11
-                            h1 {{title}}
-                        .col-sm-1
-                            button.form-control Edit
-                    .description {{markdown description}}
-                .box
-                    .comments There will be comments here!
-            .col-sm-3
-                .box
-                    | {{#if data.closed}}
-                    .main-label.closed-status Closed
-                    | {{else}}
-                    .main-label.open-status Open
-                    | {{/if}}
-                    .assigned {{assigned_to}}
-                    button.form-control Close
-                .box
-                    .sharing There will be sharing here!
+            include templates/data
 
         script(type="text/x-handlebars", data-template-name="index")
-            .col-sm-9
-                .header
-                    span.logo Backbuffer
-                    span.slogan All things. One place.
-                    button.btn.btn-default.new-btn.pull-right + New item
-                #buffer
-                    | {{#each data in model}}
-                    .buffer-item
-                        .row
-                            .col-sm-6
-                                .title: a(href="#").
-                                    {{#link-to 'data' data}}
-                                        {{data.title}}
-                                    {{/link-to}}
-                                .description {{markdown data.description}}
-                            .col-sm-6
-                                | {{#if data.closed}}
-                                .main-label.closed-status Closed
-                                | {{else}}
-                                .main-label.open-status Open
-                                | {{/if}}
-                                .main-label.assigned-me {{data.assigned_to}}
-                    | {{/each}}
-            .col-sm-3
-                #filters
-                    .title Filters
-                    .checkbox
-                        label
-                            input(type="checkbox")
-                            | Show only items assigned to me
-                    .checkbox
-                        label
-                            input(type="checkbox")
-                            | Show only open items
-
-
+            include templates/index
 
         //- Scripts section.
         script(src="/bower_components/jquery/jquery.min.js")

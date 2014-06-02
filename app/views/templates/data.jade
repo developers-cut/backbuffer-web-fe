@@ -1,0 +1,25 @@
+//- Templates/Data.jade
+//- Displays a single data, with editing capabilities on each of the fields.
+
+.col-sm-9
+    | {{#link-to 'index'}}Back to buffer (hehe){{/link-to}}
+    .box
+        .title.row
+            .col-sm-11
+                h1 {{title}}
+            .col-sm-1
+                button.form-control Edit
+        .description {{markdown description}}
+    .box
+        .comments There will be comments here!
+.col-sm-3
+    .box
+        | {{#if data.closed}}
+        .main-label.closed-status Closed
+        | {{else}}
+        .main-label.open-status Open
+        | {{/if}}
+        .assigned {{assigned_to}}
+        button.form-control Close
+    .box
+        .sharing There will be sharing here!

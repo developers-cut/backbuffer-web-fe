@@ -9,6 +9,7 @@ dev_install:
 # POG ftw...
 prod: debug
 
+# Oh dear, lack of dependencies, much?
 debug:
 	jade --pretty app/views/index.jade --out ./
 	compass compile

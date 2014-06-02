@@ -1,0 +1,12 @@
+//- Templates/Application.jade
+//- Defaults the footer and structure for each page.
+
+.container-fluid
+    .row#root
+        | {{outlet}}
+        #root-footer
+    .row#footer
+        .col-xs-12
+            span An app by
+            a(href="//developerscut.co.uk")
+                img(src="/images/d-c_logo.png")
