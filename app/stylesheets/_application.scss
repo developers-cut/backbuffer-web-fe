@@ -1,0 +1,20 @@
+// Styling for templates/application.jade.
+
+// Compass imports.
+@import 'compass/layout/sticky-footer';
+
+// Local imports.
+@import 'variables';
+
+// Styling.
+@include sticky-footer($footer_height);
+
+#footer {
+    font-size: .8em;
+    padding-top: 10px;
+    text-align: center;
+
+    a {
+        margin-left: 5px;
+    }
+}
