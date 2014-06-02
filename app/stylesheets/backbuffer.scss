@@ -1,0 +1,48 @@
+// Backbuffer main SCSS file.
+
+@import 'compass/css3/border-radius';
+
+@import 'application';
+@import 'index';
+@import 'variables';
+
+
+// Common styles.
+body {
+    background-color: $whitesmoke;
+    padding-top: 40px;
+}
+
+.description {
+    color: $palette_dark_grey;
+}
+
+.main-label {
+    color: #fff;
+    float: right;
+    padding: 5px 10px;
+
+    @include border-radius;
+
+    & + .main-label {
+        margin-right: 10px;
+    }
+}
+
+.open-status {
+    background-color: $palette_green;
+}
+
+.closed-status {
+    background-color: $closed_red;
+}
+
+.assigned-me {
+    background-color: $neutral_blue;
+}
+
+.title {
+    font-size: 1.5em;
+}
+
+

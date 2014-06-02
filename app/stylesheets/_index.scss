@@ -1,0 +1,49 @@
+// Styling for templates/index.jade.
+
+
+@import 'compass/css3/border-radius';
+
+@import 'variables';
+
+
+.logo {
+    color: $palette_green;
+    font-size: 2.5em;
+    font-style: italic;
+    margin-right: 20px;
+}
+
+.new-btn {
+    vertical-align: bottom;
+}
+
+#filters {
+    background-color: $palette_light_grey;
+    padding: 10px;
+
+    @include border-radius;
+}
+
+.header {
+    padding-bottom: 20px;
+}
+
+.slogan {
+    font-size: 1.3em;
+}
+
+#buffer {
+    background-color: #fff;
+    border: solid 1px $palette_light_grey;
+
+    @include border-radius;
+}
+
+
+.buffer-item {
+    padding: 10px;
+
+    & + .buffer-item {
+        border-top: solid 1px $really_light_grey;
+    }
+}
