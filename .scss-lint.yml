@@ -1,0 +1,80 @@
+# Configuration file for SCSS Lint (https://github.com/causes/scss-lint).
+# Linters' doc:
+# https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md
+
+linters:
+    # Motivation:
+    # http://stackoverflow.com/questions/2922909/should-i-use-border-none-or-border-0
+    BorderZero:
+        enabled: true
+    CapitalizationInSelector:
+        enabled: true
+    Indentation:
+        enabled: true
+        width: 4
+    ColorKeyword:
+        enabled: true
+    Comment:
+        enabled: true
+    Compass::*:
+        enabled: true
+    DeclarationOrder:
+        enabled: true
+    EmptyLineBetweenBlocks:
+        enabled: true
+        ignore_single_line_blocks: false
+    EmptyRule:
+        enabled: true
+    FinalNewline:
+        enabled: true
+        present: true
+    HexFormat:
+        enabled: true
+    IdWithExtraneousSelector:
+        enabled: true
+    LeadingZero:
+        enabled: true
+        style: exclude_zero
+    MergeableSelector:
+        enabled: true
+        force_nesting: true
+    NameFormat:
+        enabled: true
+        # Regexp as suggested by:
+        # http://codereview.stackexchange.com/questions/159/use-of-a-regex-stored-inside-yaml-file
+        convention: !ruby/regexp /[a-z\-_]+/
+    PropertySortOrder:
+        enabled: true
+    PropertySpelling:
+        enabled: true
+    SelectorDepth:
+        enabled: true
+    Shorthand:
+        enabled: true
+    SingleLinePerSelector:
+        enabled: false
+    SpaceAfterComma:
+        enabled: true
+    SpaceAfterPropertyColon:
+        enabled: true
+        allow_extra_spaces: false
+    SpaceAfterPropertyName:
+        enabled: true
+    SpaceBeforeBrace:
+        enabled: true
+        allow_single_line_padding: false
+    SpaceBetweenParens:
+        enabled: true
+        # spaces: 0
+    StringQuotes:
+        enabled: true
+    TrailingSemicolonAfterPropertyValue:
+        enabled: true
+    UnnecessaryMantissa:
+        enabled: true
+    UrlFormat:
+        enabled: true
+    UrlQuotes:
+        enabled: true
+    ZeroUnit:
+        enabled: true
