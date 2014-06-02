@@ -23,13 +23,13 @@ html, body {
   height: 50px;
 }
 
-/* line 19, ../../app/stylesheets/index.scss */
+/* line 19, ../../app/stylesheets/backbuffer.scss */
 body {
   background-color: #f7f7f7;
   padding-top: 40px;
 }
 
-/* line 24, ../../app/stylesheets/index.scss */
+/* line 24, ../../app/stylesheets/backbuffer.scss */
 .logo {
   font-style: italic;
   color: #008833;
@@ -37,12 +37,12 @@ body {
   margin-right: 20px;
 }
 
-/* line 31, ../../app/stylesheets/index.scss */
+/* line 31, ../../app/stylesheets/backbuffer.scss */
 .new-btn {
   vertical-align: bottom;
 }
 
-/* line 35, ../../app/stylesheets/index.scss */
+/* line 35, ../../app/stylesheets/backbuffer.scss */
 #filters {
   background-color: #cccccc;
   padding: 10px;
@@ -53,22 +53,22 @@ body {
   border-radius: 5px;
 }
 
-/* line 42, ../../app/stylesheets/index.scss */
+/* line 42, ../../app/stylesheets/backbuffer.scss */
 .description {
   color: #666666;
 }
 
-/* line 46, ../../app/stylesheets/index.scss */
+/* line 46, ../../app/stylesheets/backbuffer.scss */
 .header {
   padding-bottom: 20px;
 }
 
-/* line 50, ../../app/stylesheets/index.scss */
+/* line 50, ../../app/stylesheets/backbuffer.scss */
 .slogan {
   font-size: 1.3em;
 }
 
-/* line 54, ../../app/stylesheets/index.scss */
+/* line 54, ../../app/stylesheets/backbuffer.scss */
 .main-label {
   color: #fff;
   padding: 5px 10px;
@@ -79,27 +79,27 @@ body {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 61, ../../app/stylesheets/index.scss */
+/* line 61, ../../app/stylesheets/backbuffer.scss */
 .main-label + .main-label {
   margin-right: 10px;
 }
 
-/* line 66, ../../app/stylesheets/index.scss */
+/* line 66, ../../app/stylesheets/backbuffer.scss */
 .open-status {
   background-color: #008833;
 }
 
-/* line 70, ../../app/stylesheets/index.scss */
+/* line 70, ../../app/stylesheets/backbuffer.scss */
 .closed-status {
   background-color: #ff5555;
 }
 
-/* line 74, ../../app/stylesheets/index.scss */
+/* line 74, ../../app/stylesheets/backbuffer.scss */
 .assigned-me {
   background-color: #3333ff;
 }
 
-/* line 78, ../../app/stylesheets/index.scss */
+/* line 78, ../../app/stylesheets/backbuffer.scss */
 #buffer {
   background-color: #fff;
   border: solid 1px #cccccc;
@@ -110,27 +110,27 @@ body {
   border-radius: 5px;
 }
 
-/* line 85, ../../app/stylesheets/index.scss */
+/* line 85, ../../app/stylesheets/backbuffer.scss */
 .buffer-item {
   padding: 10px;
 }
-/* line 88, ../../app/stylesheets/index.scss */
+/* line 88, ../../app/stylesheets/backbuffer.scss */
 .buffer-item + .buffer-item {
   border-top: solid 1px #eeeeee;
 }
 
-/* line 93, ../../app/stylesheets/index.scss */
+/* line 93, ../../app/stylesheets/backbuffer.scss */
 .title {
   font-size: 1.5em;
 }
 
-/* line 97, ../../app/stylesheets/index.scss */
+/* line 97, ../../app/stylesheets/backbuffer.scss */
 #footer {
   font-size: .8em;
   padding-top: 10px;
   text-align: center;
 }
-/* line 102, ../../app/stylesheets/index.scss */
+/* line 102, ../../app/stylesheets/backbuffer.scss */
 #footer a {
   margin-left: 5px;
 }
