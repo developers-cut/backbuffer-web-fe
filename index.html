@@ -17,31 +17,27 @@
       </div>
     </script>
     <script type="text/x-handlebars" data-template-name="data">
-      <div class="col-sm-9">
+      <div class="col-sm-9">{{#link-to 'index'}}Back to buffer (hehe){{/link-to}}
         <div class="box">
           <div class="title row">
             <div class="col-sm-11">
-              <h1>Finish task view for backbuffer</h1>
+              <h1>{{title}}</h1>
             </div>
             <div class="col-sm-1">
               <button class="form-control">Edit</button>
             </div>
           </div>
-          <div class="description">
-            <p>
-              * Interface with hard data
-              * Editable fields via Javascript
-            </p>
-          </div>
+          <div class="description">{{markdown description}}</div>
         </div>
         <div class="box">
           <div class="comments">There will be comments here!</div>
         </div>
       </div>
       <div class="col-sm-3">
-        <div class="box">
-          <div class="main-label open-status">Open</div>
-          <div class="assigned">To me</div>
+        <div class="box">{{#if data.closed}}
+          <div class="main-label closed-status">Closed</div>{{else}}
+          <div class="main-label open-status">Open</div>{{/if}}
+          <div class="assigned">{{assigned_to}}</div>
           <button class="form-control">Close</button>
         </div>
         <div class="box">
