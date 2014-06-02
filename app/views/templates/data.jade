@@ -2,23 +2,36 @@
 //- Displays a single data, with editing capabilities on each of the fields.
 
 .col-sm-9
-    | {{#link-to 'index'}}Back to buffer (hehe){{/link-to}}
+    .back-to-buffer-link {{#link-to 'index'}}Back to buffer (hehe){{/link-to}}
     .box
-        .title.row
+        button.btn.pull-right Edit
+        .data-title.row
             .col-sm-11
                 h1 {{title}}
-                button.form-control Edit
-        .description {{markdown description}}
+        .data-description {{markdown description}}
     .box
-        .comments There will be comments here!
+        .comments
+            p There will be comments here!
 .col-sm-3
     .box
-        | {{#if data.closed}}
-        .main-label.closed-status Closed
-        | {{else}}
-        .main-label.open-status Open
-        | {{/if}}
-        .assigned {{assigned_to}}
-        button.form-control Close
+        .status-container
+            | {{#if data.closed}}
+            .main-label.closed-status Closed
+            | {{else}}
+            .main-label.open-status Open
+            | {{/if}}
+        .assigned-container
+            .assigned
+                label Assigned to:
+                div
+                    | {{assigned_to}}
+                    span.glyphicon.glyphicon-edit
+        button.form-control.
+            {{#if data.closed}}
+                Reopen
+            {{else}}
+                Close
+            {{/if}}
     .box
-        .sharing There will be sharing here!
+        .sharing
+            p There will be sharing here!
