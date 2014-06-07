@@ -19,7 +19,7 @@ Backbuffer.Data = DS.Model.extend({
 Backbuffer.IndexRoute = Ember.Route.extend({
     model: function() {
         return this.store.find('data');
-    },
+    }
 });
 
 Backbuffer.DataRoute = Ember.Route.extend({
@@ -36,7 +36,7 @@ Backbuffer.DataController = Ember.ObjectController.extend({
         editBasicInfo: function(cancel) {
             if (this.get('basicInfoEdit')) {
                 this.set('basicInfoEdit', false);
-            
+
                 // Some code.
             } else {
                 this.set('basicInfoEdit', true);
