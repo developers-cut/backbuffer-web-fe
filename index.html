@@ -20,13 +20,25 @@
       <div class="col-sm-9">
         <div class="back-to-buffer-link">{{#link-to 'index'}}Back to buffer (hehe){{/link-to}}</div>
         <div class="box">
-          <button class="btn pull-right">Edit</button>
+          {{#if basicInfoEdit}}
+              <button class="btn pull-right" {{action "editBasicInfo" false}}>
+                  Save
+              </button>
+              <button class="btn pull-right" {{action "editBasicInfo" true}}>
+                  Cancel
+              </button>
+              {{input class="form-control" type="text" value=title}}
+              {{textarea value=description class="form-control"}}
+          {{else}}
+              <button class="btn pull-right" {{action "editBasicInfo" false}}>
+                  Edit
+              </button>
           <div class="data-title row">
             <div class="col-sm-11">
               <h1>{{title}}</h1>
             </div>
           </div>
-          <div class="data-description">{{markdown description}}</div>
+          <div class="data-description">{{markdown description}}</div>{{/if}}
         </div>
         <div class="box">
           <div class="comments">
@@ -36,22 +48,33 @@
       </div>
       <div class="col-sm-3">
         <div class="box">
-          <div class="status-container">{{#if data.closed}}
+          <div class="status-container">{{#if closed}}
             <div class="main-label closed-status">Closed</div>{{else}}
             <div class="main-label open-status">Open</div>{{/if}}
           </div>
           <div class="assigned-container">
             <div class="assigned">
               <label>Assigned to:</label>
-              <div>{{assigned_to}}<span class="glyphicon glyphicon-edit"></span></div>
+              <div>
+                {{#if assignedToEdit}}
+                    {{input value=assigned_to type="text"}}
+                    <span class="glyphicon glyphicon-ok"
+                          {{action "editAssignedTo" false}}></span>
+                    <span class="glyphicon glyphicon-remove"
+                          {{action "editAssignedTo" true}}></span>
+                {{else}}
+                    {{assigned_to}}
+                    <span class="glyphicon glyphicon-edit"
+                          {{action "editAssignedTo" false}}></span>
+                {{/if}}
+              </div>
             </div>
-          </div>
-          <button class="form-control">
-            {{#if data.closed}}
-                Reopen
-            {{else}}
-                Close
-            {{/if}}
+          </div><button class="form-control" {{action "changeStatus"}}>
+             {{#if closed}}
+                 Reopen
+             {{else}}
+                 Close
+             {{/if}}
           </button>
         </div>
         <div class="box">
@@ -63,8 +86,8 @@
     </script>
     <script type="text/x-handlebars" data-template-name="index">
       <div class="col-sm-9">
-        <div class="header"><span class="logo">Backbuffer</span><span class="slogan">All things. One place.</span>
-          <button class="btn btn-default new-btn pull-right">+ New item</button>
+        <div class="header"><span class="logo">Backbuffer</span><span class="slogan">All things. One place.</span><button class="btn btn-default new-btn pull-right"
+                  {{action "createData"}}>+ New item</button>
         </div>
         <div id="buffer">{{#each data in model}}
           <div class="buffer-item">

@@ -5,7 +5,9 @@
     .header
         span.logo Backbuffer
         span.slogan All things. One place.
-        button.btn.btn-default.new-btn.pull-right + New item
+        //- button.btn.btn-default.new-btn.pull-right  + New item
+        | <button class="btn btn-default new-btn pull-right"
+        |         {{action "createData"}}>+ New item</button>
     #buffer
         | {{#each data in model}}
         .buffer-item
