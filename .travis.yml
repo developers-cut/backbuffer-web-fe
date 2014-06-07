@@ -11,5 +11,5 @@ before_install:
   # conversion from app.yaml to requirements.txt.
   # TODO(royalsflush): script to convert app.yaml libs to requirements.txt. For
   # now, I'll leave this out.
-install: ""
+install: "make prod"
 script: ""
