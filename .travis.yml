@@ -1,0 +1,17 @@
+language: python
+python:
+  - "2.7"
+before_install:
+  # Front end requirements.
+  - "npm install"
+  - "npm install -g bower"
+  - "bower install"
+  - "npm install -g grunt"
+  - "bundle install"
+
+  # Stupid app engine doesn't use requirements.txt, so I have to make a
+  # conversion from app.yaml to requirements.txt.
+  # TODO(royalsflush): script to convert app.yaml libs to requirements.txt. For
+  # now, I'll leave this out.
+install: "grunt"
+script: ""
