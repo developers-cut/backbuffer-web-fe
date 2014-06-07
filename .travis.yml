@@ -7,6 +7,7 @@ before_install:
   - "npm install -g bower"
   - "bower install"
   - "npm install -g grunt"
+  - "bundle install"
 
   # Stupid app engine doesn't use requirements.txt, so I have to make a
   # conversion from app.yaml to requirements.txt.
