@@ -7,7 +7,7 @@ Backbuffer.Store = DS.Store.extend({
 
 Backbuffer.Router.map(function() {
     this.resource('data', {path: '/:data_id'});
-})
+});
 
 Backbuffer.Data = DS.Model.extend({
     title: DS.attr('string'),
