@@ -13,8 +13,9 @@
         "grunt": "0.4.x",
         "grunt-cli": "0.1.13",
         "grunt-contrib-jade": "",
+        "grunt-contrib-compass": "",
         "grunt-contrib-jshint": "",
-        "grunt-contrib-watch": "",
+        "grunt-contrib-uglify": "",
         "es6-module-packager": ""
     },
     "engine": "node >= 0.10.1"
