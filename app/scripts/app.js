@@ -5,10 +5,6 @@ Backbuffer.Store = DS.Store.extend({
     adapter: DS.FixtureAdapter
 });
 
-Backbuffer.Router.map(function() {
-    this.resource('data', {path: '/:data_id'});
-});
-
 Backbuffer.Data = DS.Model.extend({
     title: DS.attr('string'),
     description: DS.attr('string'),
@@ -16,15 +12,29 @@ Backbuffer.Data = DS.Model.extend({
     assigned_to: DS.attr('string')
 });
 
-Backbuffer.IndexRoute = Ember.Route.extend({
+Backbuffer.Router.map(function() {
+    this.resource('data', {path: '/'}, function() {
+        this.route('word', {path: 'data/:data_id'});
+        this.route('new');
+    });
+});
+
+Backbuffer.DataIndexRoute = Ember.Route.extend({
     model: function() {
         return this.store.find('data');
     }
 });
 
-Backbuffer.DataRoute = Ember.Route.extend({
+Backbuffer.DataWordRoute = Ember.Route.extend({
     model: function(params) {
         return this.store.find('data', params.data_id);
+    }
+});
+
+Backbuffer.DataNewRoute = Ember.Route.extend({
+    renderTemplate: function() {
+        this.render('data/word');  // template is the same as edit with different
+                              // controller.
     }
 });
 
@@ -37,26 +47,26 @@ Backbuffer.DataController = Ember.ObjectController.extend({
             if (this.get('basicInfoEdit')) {
                 this.set('basicInfoEdit', false);
 
-                // Some code.
+                // Some code to save.
             } else {
                 this.set('basicInfoEdit', true);
-
-                // Some code.
             }
         },
         editAssignedTo: function(cancel) {
             if (this.get('assignedToEdit')) {
                 this.set('assignedToEdit', false);
 
-                // Some code.
+                // Some code to save.
             } else {
                 this.set('assignedToEdit', true);
-
-                // Some code.
             }
         },
         changeStatus: function() {
             this.set('closed', !this.get('closed'));
         },
     }
+});
+
+Backbuffer.NewController = Ember.ObjectController.extend({
+
 });

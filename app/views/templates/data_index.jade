@@ -1,20 +1,20 @@
-//- Templates/Index.jade
+//- Templates/DataIndex.jade
 //- Displays a list of data (the 'buffer').
 
 .col-sm-9
     .header
         span.logo Backbuffer
-        span.slogan All things. One place.
-        //- button.btn.btn-default.new-btn.pull-right  + New item
-        | <button class="btn btn-default new-btn pull-right"
-        |         {{action "createData"}}>+ New item</button>
+        span.slogan Personal issue tracker.
+        | {{#link-to 'data.new'}}
+        button.btn.btn-default.new-btn.pull-right  + New item
+        | {{/link-to}}
     #buffer
         | {{#each data in model}}
         .buffer-item
             .row
                 .col-sm-6
                     .title: a(href="#").
-                        {{#link-to 'data' data}}
+                        {{#link-to 'data.word' data}}
                             {{data.title}}
                         {{/link-to}}
                     .description {{markdown data.description}}
