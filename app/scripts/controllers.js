@@ -1,3 +1,5 @@
+// Backbuffer Controllers, all of them.
+
 Backbuffer.DataWordController = Ember.ObjectController.extend({
     basicInfoEdit: false,
     assignedToEdit: false,

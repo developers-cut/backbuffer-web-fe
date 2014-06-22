@@ -1,4 +1,4 @@
-// Main coffee file for Backbuffer.
+// Backbuffer Models.
 
 var Backbuffer = Ember.Application.create();
 Backbuffer.Store = DS.Store.extend({

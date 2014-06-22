@@ -1,3 +1,5 @@
+// Backbuffer Router and Routes.
+
 Backbuffer.Router.map(function() {
     this.resource('data', {path: '/'}, function() {
         this.route('word', {path: '/:data_id'});
