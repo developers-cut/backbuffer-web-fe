@@ -1,0 +1,63 @@
+//- Templates/DataWord.jade
+//- Displays a single data, with editing capabilities on each of the fields.
+
+.col-sm-9
+    .back-to-buffer-link.
+        {{#link-to 'data.index'}}Back to buffer (hehe){{/link-to}}
+    .box
+        | {{#if basicInfoEdit}}
+        |     <button class="btn pull-right" {{action "editBasicInfo" false}}>
+        |         Save
+        |     </button>
+        |     <button class="btn pull-right" {{action "editBasicInfo" true}}>
+        |         Cancel
+        |     </button>
+        |     {{input class="form-control" type="text" value=title}}
+        |     {{textarea value=description class="form-control"}}
+
+        | {{else}}
+        |     <button class="btn pull-right" {{action "editBasicInfo" false}}>
+        |         Edit
+        |     </button>
+        .data-title.row
+            .col-sm-11
+                h1 {{title}}
+        .data-description {{markdown description}}
+        | {{/if}}
+
+    .box
+        .comments
+            p There will be comments here!
+.col-sm-3
+    .box
+        .status-container
+            | {{#if closed}}
+            .main-label.closed-status Closed
+            | {{else}}
+            .main-label.open-status Open
+            | {{/if}}
+        .assigned-container
+            .assigned
+                label Assigned to:
+                div
+                    | {{#if assignedToEdit}}
+                    |     {{input value=assigned_to type="text"}}
+                    |     <span class="glyphicon glyphicon-ok"
+                    |           {{action "editAssignedTo" false}}></span>
+                    |     <span class="glyphicon glyphicon-remove"
+                    |           {{action "editAssignedTo" true}}></span>
+                    | {{else}}
+                    |     {{assigned_to}}
+                    |     <span class="glyphicon glyphicon-edit"
+                    |           {{action "editAssignedTo" false}}></span>
+                    | {{/if}}
+        | <button class="form-control" {{action "changeStatus"}}>
+        |    {{#if closed}}
+        |        Reopen
+        |    {{else}}
+        |        Close
+        |    {{/if}}
+        |</button>
+    .box
+        .sharing
+            p There will be sharing here!

@@ -15,11 +15,14 @@ html
         script(type="text/x-handlebars", data-template-name="application")
             include templates/application
 
-        script(type="text/x-handlebars", data-template-name="data")
-            include templates/data
+        script(type="text/x-handlebars", data-template-name="data/word")
+            include templates/data_word
 
-        script(type="text/x-handlebars", data-template-name="index")
-            include templates/index
+        script(type="text/x-handlebars", data-template-name="data/index")
+            include templates/data_index
+
+        script(type="text/x-handlebars", data-template-name="data/new")
+            include templates/data_new
 
         //- Scripts section.
         script(src="/bower_components/jquery/jquery.min.js")
