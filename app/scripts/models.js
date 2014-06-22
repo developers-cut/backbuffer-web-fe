@@ -11,5 +11,3 @@ Backbuffer.Data = DS.Model.extend({
     closed: DS.attr('boolean'),
     assigned_to: DS.attr('string')
 });
-
-

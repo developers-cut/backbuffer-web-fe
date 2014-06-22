@@ -30,7 +30,13 @@ Backbuffer.DataWordController = Ember.ObjectController.extend({
 Backbuffer.DataNewController = Backbuffer.DataWordController.extend({
     actions: {
         createData: function() {
-
+            var new_data = this.store.createRecord(Backbuffer.Data, {
+                'title': this.get('title'),
+                'description': this.get('description'),
+                'closed': this.get('closed'),
+                'assigned_to': this.get('assigned_to')
+            });
+            this.transitionToRoute('data.word', new_data);
         }
     }
 });

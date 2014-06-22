@@ -19,6 +19,6 @@ Backbuffer.DataWordRoute = Ember.Route.extend({
 
 Backbuffer.DataNewRoute = Ember.Route.extend({
     model: function() {
-        return 
+        return {};
     }
 });

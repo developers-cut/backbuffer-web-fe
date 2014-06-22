@@ -8,7 +8,8 @@
     .box.
         {{input class="form-control" type="text" value=title}}
         {{textarea value=description class="form-control"}}
-    button.btn.pull-right Save it!
+    //- button.btn.pull-right Save it!
+    | <button class="btn pull-right" {{action 'createData'}}>Save it!</button>
 .col-sm-3
     .box
         .status-container

@@ -66,4 +66,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.registerTask('default', ['jade', 'compass', 'concat', 'uglify',
                                    'jshint']);
+    grunt.registerTask('debug', ['jade', 'compass', 'concat', 'jshint']);
 }
