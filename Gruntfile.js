@@ -37,10 +37,19 @@ module.exports = function(grunt) {
                 }
             }
         },
+        concat: {
+            bkb: {
+                // There must be a better way of doing this...
+                src: ['app/scripts/models.js', 'app/scripts/routes.js',
+                      'app/scripts/controllers.js', 'app/scripts/fixtures.js',
+                      'app/scripts/handlebars_helpers.js'],
+                dest: 'public/js/backbuffer.js'
+            }
+        },
         uglify: {
             compile: {
                 files: {
-                    'public/js/backbuffer.js': 'app/scripts/*.js'
+                    'public/js/backbuffer.js': 'public/js/backbuffer.js'
                 }
             }
         },
@@ -50,9 +59,11 @@ module.exports = function(grunt) {
     });
 
     // grunt.loadNpmTasks('grunt-emblem');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.registerTask('default', ['jade', 'compass', 'uglify', 'jshint']);
+    grunt.registerTask('default', ['jade', 'compass', 'concat', 'uglify',
+                                   'jshint']);
 }

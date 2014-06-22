@@ -2,32 +2,13 @@
 //- Displays a single data, with editing capabilities on each of the fields.
 
 .col-sm-9
-    .back-to-buffer-link.
-        {{#link-to 'data.index'}}Back to buffer (hehe){{/link-to}}
-    .box
-        | {{#if basicInfoEdit}}
-        |     <button class="btn pull-right" {{action "editBasicInfo" false}}>
-        |         Save
-        |     </button>
-        |     <button class="btn pull-right" {{action "editBasicInfo" true}}>
-        |         Cancel
-        |     </button>
-        |     {{input class="form-control" type="text" value=title}}
-        |     {{textarea value=description class="form-control"}}
+    .back-to-buffer-link
+        | {{#link-to 'data.index'}}Changed my mind... no new nothing{{/link-to}}
 
-        | {{else}}
-        |     <button class="btn pull-right" {{action "editBasicInfo" false}}>
-        |         Edit
-        |     </button>
-        .data-title.row
-            .col-sm-11
-                h1 {{title}}
-        .data-description {{markdown description}}
-        | {{/if}}
-
-    .box
-        .comments
-            p There will be comments here!
+    .box.
+        {{input class="form-control" type="text" value=title}}
+        {{textarea value=description class="form-control"}}
+    button.btn.pull-right Save it!
 .col-sm-3
     .box
         .status-container
